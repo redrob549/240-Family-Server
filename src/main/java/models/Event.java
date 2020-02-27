@@ -3,15 +3,29 @@ package models;
 import java.util.SortedSet;
 
 public class Event {
+
     private String eventID;
     private String associatedUser;
     private String personID;
-    private String latitude;
-    private String longitude;
+    private double latitude;
+    private double longitude;
     private String country;
     private String city;
     private String eventType;
     private int year;
+
+    public Event(String eventID, String associatedUser, String personID, double latitude, double longitude,
+                 String country, String city, String eventType, int year) {
+        this.eventID = eventID;
+        this.associatedUser = associatedUser;
+        this.personID = personID;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.country = country;
+        this.city = city;
+        this.eventType = eventType;
+        this.year = year;
+    }
 
     public String getEventID() {
         return eventID;
@@ -37,19 +51,19 @@ public class Event {
         this.personID = personID;
     }
 
-    public String getLatitude() {
+    public double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(String latitude) {
+    public void setLatitude(double latitude) {
         this.latitude = latitude;
     }
 
-    public String getLongitude() {
+    public double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(String longitude) {
+    public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
 
@@ -83,5 +97,25 @@ public class Event {
 
     public void setYear(int year) {
         this.year = year;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null)
+            return false;
+        if (o instanceof Event) {
+            Event oEvent = (Event) o;
+            return oEvent.getEventID().equals(getEventID()) &&
+                    oEvent.getAssociatedUser().equals(getAssociatedUser()) &&
+                    oEvent.getPersonID().equals(getPersonID()) &&
+                    oEvent.getLatitude() == (getLatitude()) &&
+                    oEvent.getLongitude() == (getLongitude()) &&
+                    oEvent.getCountry().equals(getCountry()) &&
+                    oEvent.getCity().equals(getCity()) &&
+                    oEvent.getEventType().equals(getEventType()) &&
+                    oEvent.getYear() == (getYear());
+        } else {
+            return false;
+        }
     }
 }

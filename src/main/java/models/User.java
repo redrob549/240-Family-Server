@@ -1,6 +1,17 @@
 package models;
 
 public class User {
+    public User(String userName, String password, String email, String firstName,
+                String lastName, String gender, String personID) {
+        this.userName = userName;
+        this.password = password;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.personID = personID;
+    }
+
     private String userName;
     private String password;
     private String email;
@@ -67,5 +78,23 @@ public class User {
 
     public void setPersonID(String personID) {
         this.personID = personID;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null)
+            return false;
+        if (o instanceof User) {
+            User oUser = (User) o;
+            return oUser.getUserName().equals(getUserName()) &&
+                    oUser.getPassword().equals(getPassword()) &&
+                    oUser.getEmail().equals(getEmail()) &&
+                    oUser.getFirstName().equals(getFirstName()) &&
+                    oUser.getLastName().equals(getLastName()) &&
+                    oUser.getGender().equals(getGender()) &&
+                    oUser.getPersonID().equals(getPersonID());
+        } else {
+            return false;
+        }
     }
 }

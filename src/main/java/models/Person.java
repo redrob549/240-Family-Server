@@ -1,5 +1,7 @@
 package models;
 
+import java.util.Objects;
+
 public class Person {
     private String personID;
     private String associatedUser;
@@ -9,6 +11,17 @@ public class Person {
     private String motherID;
     private String fatherID;
     private String spouseID;
+
+    public Person(String personID, String associatedUser, String firstName, String lastName, String gender, String motherID, String fatherID, String spouseID) {
+        this.personID = personID;
+        this.associatedUser = associatedUser;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.motherID = motherID;
+        this.fatherID = fatherID;
+        this.spouseID = spouseID;
+    }
 
     public String getPersonID() {
         return personID;
@@ -72,5 +85,20 @@ public class Person {
 
     public void setSpouseID(String spouseID) {
         this.spouseID = spouseID;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return Objects.equals(personID, person.personID) &&
+                Objects.equals(associatedUser, person.associatedUser) &&
+                Objects.equals(firstName, person.firstName) &&
+                Objects.equals(lastName, person.lastName) &&
+                Objects.equals(gender, person.gender) &&
+                Objects.equals(motherID, person.motherID) &&
+                Objects.equals(fatherID, person.fatherID) &&
+                Objects.equals(spouseID, person.spouseID);
     }
 }

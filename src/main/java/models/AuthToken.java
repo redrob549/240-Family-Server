@@ -2,6 +2,12 @@ package models;
 
 public class AuthToken {
     private String tokenID;
+    private String userName;
+
+    public AuthToken(String tokenID, String userName) {
+        this.tokenID = tokenID;
+        this.userName = userName;
+    }
 
     public String getTokenID() {
         return tokenID;
@@ -19,5 +25,5 @@ public class AuthToken {
         this.userName = userName;
     }
 
-    private String userName;
+
 }

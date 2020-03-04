@@ -1,5 +1,9 @@
 package dao;
-import DAOs.*;
+
+import DAOs.DataAccessException;
+import DAOs.Database;
+import DAOs.EventDAO;
+import DAOs.PersonDAO;
 import models.Person;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -18,7 +22,7 @@ public class PersonDAOTest {
         db = new Database();
         testPerson = new Person("qwer1234", "mememaster420", "samantha",
                 "parkins", "F", "mom123", "dad123", "babe123");
-        testPerson2 = new Person("qwer1235", "mememaster421", "samanthar",
+        testPerson2 = new Person("qwer1235", "mememaster420", "samanthar",
                 "parkins", "F", "mom123", "dad123", "babe123");
     }
 
@@ -158,6 +162,47 @@ public class PersonDAOTest {
 
         //Now make sure that compareTest is indeed null
         assertNull(compareTest);
+    }
+
+    @Test
+    public void findAllPass() throws Exception {
+        //We want to make sure insert works
+        //First lets create an Event that we'll set to null. We'll use this to make sure what we put
+        //in the database is actually there.
+        Person[] compareTest = null;
+        Person compareTest1 = null;
+        Person compareTest2 = null;
+
+        try {
+            //Let's get our connection and make a new DAO
+            Connection conn = db.openConnection();
+            PersonDAO pDao = new PersonDAO(conn);
+            //While insert returns a bool we can't use that to verify that our function actually worked
+            //only that it ran without causing an error
+            pDao.insert(testPerson);
+            pDao.insert(testPerson2);
+            //So lets use a find method to get the event that we just put in back out
+            compareTest = pDao.findAll(testPerson.getAssociatedUser());
+            db.closeConnection(true);
+        } catch (DataAccessException e) {
+            db.closeConnection(false);
+        }
+        //First lets see if our find found anything at all. If it did then we know that if nothing
+        //else something was put into our database, since we cleared it in the beginning
+        assertNotNull(compareTest);
+        //Now lets make sure that what we put in is exactly the same as what we got out. If this
+        //passes then we know that our insert did put something in, and that it didn't change the
+        //data in any way
+        if (compareTest[0].getFirstName().equals(testPerson.getFirstName())) {
+            compareTest1 = compareTest[0];
+            compareTest2 = compareTest[1];
+        }
+        else {
+            compareTest1 = compareTest[1];
+            compareTest2 = compareTest[0];
+        }
+        assertEquals(testPerson, compareTest1);
+        assertEquals(testPerson2, compareTest2);
     }
 
     @Test

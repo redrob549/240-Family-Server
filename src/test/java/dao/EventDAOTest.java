@@ -1,6 +1,9 @@
 package dao;
 
-import DAOs.*;
+import DAOs.DataAccessException;
+import DAOs.Database;
+import DAOs.EventDAO;
+import DAOs.UserDAO;
 import models.Event;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -14,6 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class EventDAOTest {
     private Database db;
     private Event bestEvent;
+    private Event otherEvent;
 
     @BeforeEach
     public void setUp() throws Exception {
@@ -24,6 +28,9 @@ public class EventDAOTest {
         bestEvent = new Event("Biking_123A", "Gale", "Gale123A",
                 10.3f, 10.3f, "Japan", "Ushiku",
                 "Biking_Around", 2016);
+        otherEvent = new Event("Biking_123B", "Gale", "Gale123A",
+                10.3f, 10.3f, "Japan", "Ushiku",
+                "Golfing", 2017);
     }
 
     @AfterEach
@@ -109,5 +116,79 @@ public class EventDAOTest {
 
         //Now make sure that compareTest is indeed null
         assertNull(compareTest);
+    }
+
+    @Test
+    public void findPass() throws Exception{
+        //We want to make sure insert works
+        //First lets create an Event that we'll set to null. We'll use this to make sure what we put
+        //in the database is actually there.
+        Event compareTest1 = null;
+        Event compareTest2 = null;
+
+        try {
+            //Let's get our connection and make a new DAO
+            Connection conn = db.openConnection();
+            EventDAO eDao = new EventDAO(conn);
+            //While insert returns a bool we can't use that to verify that our function actually worked
+            //only that it ran without causing an error
+            eDao.insert(bestEvent);
+            eDao.insert(otherEvent);
+            //So lets use a find method to get the event that we just put in back out
+            compareTest1 = eDao.find(bestEvent.getEventID());
+            compareTest2 = eDao.find(otherEvent.getEventID());
+            db.closeConnection(true);
+        } catch (DataAccessException e) {
+            db.closeConnection(false);
+        }
+        //First lets see if our find found anything at all. If it did then we know that if nothing
+        //else something was put into our database, since we cleared it in the beginning
+        assertNotNull(compareTest1);
+        //Now lets make sure that what we put in is exactly the same as what we got out. If this
+        //passes then we know that our insert did put something in, and that it didn't change the
+        //data in any way
+        assertEquals(bestEvent, compareTest1);
+        assertEquals(otherEvent, compareTest2);
+    }
+
+    @Test
+    public void findAllPass() throws Exception {
+        //We want to make sure insert works
+        //First lets create an Event that we'll set to null. We'll use this to make sure what we put
+        //in the database is actually there.
+        Event[] compareTest = null;
+        Event compareTest1 = null;
+        Event compareTest2 = null;
+
+        try {
+            //Let's get our connection and make a new DAO
+            Connection conn = db.openConnection();
+            EventDAO eDao = new EventDAO(conn);
+            //While insert returns a bool we can't use that to verify that our function actually worked
+            //only that it ran without causing an error
+            eDao.insert(bestEvent);
+            eDao.insert(otherEvent);
+            //So lets use a find method to get the event that we just put in back out
+            compareTest = eDao.findAll(bestEvent.getAssociatedUser());
+            db.closeConnection(true);
+        } catch (DataAccessException e) {
+            db.closeConnection(false);
+        }
+        //First lets see if our find found anything at all. If it did then we know that if nothing
+        //else something was put into our database, since we cleared it in the beginning
+        assertNotNull(compareTest);
+        //Now lets make sure that what we put in is exactly the same as what we got out. If this
+        //passes then we know that our insert did put something in, and that it didn't change the
+        //data in any way
+        if (compareTest[0].getYear() == 2016) {
+            compareTest1 = compareTest[0];
+            compareTest2 = compareTest[1];
+        }
+        else {
+            compareTest1 = compareTest[1];
+            compareTest2 = compareTest[0];
+        }
+        assertEquals(bestEvent, compareTest1);
+        assertEquals(otherEvent, compareTest2);
     }
 }

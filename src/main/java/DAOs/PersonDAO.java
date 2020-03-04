@@ -3,6 +3,7 @@ package DAOs;
 import models.Person;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 public class PersonDAO {
     private final Connection conn;
@@ -73,6 +74,37 @@ public class PersonDAO {
         }
         return null;
     }
+
+    public Person[] findAll(String username) throws DataAccessException {
+        ArrayList<Person> personList = new ArrayList<>();
+        ResultSet rs = null;
+        String sql = "SELECT * FROM Person WHERE associatedUser = ?;";
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, username);
+            rs = stmt.executeQuery();
+            while (rs.next()) {
+                Person tempPerson = new Person(rs.getString("personID"), rs.getString("associatedUser"),
+                        rs.getString("firstName"), rs.getString("lastName"), rs.getString("gender"),
+                        rs.getString("motherID"), rs.getString("fatherID"), rs.getString("spouseID"));
+                personList.add(tempPerson);
+            }
+            Person[] retArray = new Person[personList.size()];
+            return personList.toArray(retArray);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new DataAccessException("Error encountered while finding person");
+        } finally {
+            if(rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        }
+    }
+
     /**
      * deletes everything from the Person table.
      * @throws DataAccessException thrown if somehow deleting everything didn't work

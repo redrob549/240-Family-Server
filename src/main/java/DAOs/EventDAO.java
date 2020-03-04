@@ -2,10 +2,8 @@ package DAOs;
 
 import models.Event;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
 
 
 public class EventDAO {
@@ -80,8 +78,48 @@ public class EventDAO {
         }
         return null;
     }
+
+    public Event[] findAll(String username) throws DataAccessException {
+        ArrayList<Event> eventList = new ArrayList<>();
+        ResultSet rs = null;
+        String sql = "SELECT * FROM Event WHERE associatedUser = ?;";
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, username);
+            rs = stmt.executeQuery();
+            while (rs.next()) {
+                Event tempevent = new Event(rs.getString("EventID"), rs.getString("AssociatedUser"),
+                        rs.getString("PersonID"), rs.getFloat("Latitude"), rs.getFloat("Longitude"),
+                        rs.getString("Country"), rs.getString("City"), rs.getString("EventType"),
+                        rs.getInt("Year"));
+                eventList.add(tempevent);
+            }
+            Event[] retArray = new Event[eventList.size()];
+            return eventList.toArray(retArray);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new DataAccessException("Error encountered while finding events");
+        } finally {
+            if(rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        }
+        //return null;
+    }
+
     /**
-     * deletes everything from the Event table. currently stubbed.
+     * deletes everything from the Event table.
      */
-    public void Clear() {}
+    public void Clear() throws DataAccessException {
+        try (Statement stmt = conn.createStatement()){
+            String sql = "DELETE FROM Event";
+            stmt.executeUpdate(sql);
+        } catch (SQLException e) {
+            throw new DataAccessException("SQL Error encountered while clearing tables");
+        }
+    }
 }

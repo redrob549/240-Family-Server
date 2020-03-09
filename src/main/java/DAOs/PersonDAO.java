@@ -1,6 +1,6 @@
 package DAOs;
 
-import models.Person;
+import FMSmodels.Person;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -75,6 +75,16 @@ public class PersonDAO {
         return null;
     }
 
+    public void deleteAssociated(String username) throws DataAccessException {
+        String sql = "DELETE FROM Person WHERE associatedUser = ?;";
+        try (PreparedStatement stmt = conn.prepareStatement(sql)){
+            stmt.setString(1, username);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new DataAccessException("SQL Error encountered while removing associated persons");
+        }
+    }
+
     public Person[] findAll(String username) throws DataAccessException {
         ArrayList<Person> personList = new ArrayList<>();
         ResultSet rs = null;
@@ -111,7 +121,7 @@ public class PersonDAO {
      */
     public void clear() throws DataAccessException {
         try (Statement stmt = conn.createStatement()){
-            String sql = "DELETE FROM Person";
+            String sql = "DELETE FROM Person;";
             stmt.executeUpdate(sql);
         } catch (SQLException e) {
             throw new DataAccessException("SQL Error encountered while clearing tables");

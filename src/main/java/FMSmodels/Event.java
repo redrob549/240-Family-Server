@@ -1,10 +1,11 @@
-package models;
+package FMSmodels;
 
-import java.util.SortedSet;
+import com.google.gson.annotations.SerializedName;
 
 public class Event {
 
     private String eventID;
+    @SerializedName("associatedUsername")
     private String associatedUser;
     private String personID;
     private double latitude;

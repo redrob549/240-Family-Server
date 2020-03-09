@@ -1,6 +1,6 @@
 package DAOs;
 
-import models.Event;
+import FMSmodels.Event;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -77,6 +77,16 @@ public class EventDAO {
 
         }
         return null;
+    }
+
+    public void deleteAssociated(String username) throws DataAccessException {
+        String sql = "DELETE FROM Event WHERE associatedUser = ?;";
+        try (PreparedStatement stmt = conn.prepareStatement(sql)){
+            stmt.setString(1, username);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new DataAccessException("SQL Error encountered while removing associated events");
+        }
     }
 
     public Event[] findAll(String username) throws DataAccessException {

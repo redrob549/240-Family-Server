@@ -1,38 +1,35 @@
 package services;
 
-import models.AuthToken;
+import DAOs.DataAccessException;
+import DAOs.Database;
+import DAOs.EventDAO;
+import FMSmodels.Event;
+
+import java.sql.Connection;
 
 public class EventService {
     public EventService() {
     }
 
     /**
-     * constructor for finding all events of the user's family
-     * @param token provides authorization and the user data
-     */
-    public EventService(AuthToken token) {
-        myToken = token;
-    }
-
-    /**
      * constructor to find a single event.
-     * @param token provides authorization.
-     * @param event the event ID to look up the event.
+     * @param eventID the event ID to look up the event.
      */
-    public  EventService(AuthToken token, String event) {
-        myToken = token;
-        eventID = event;
+    public  EventService(String eventID) {
+        this.eventID = eventID;
     }
-    private AuthToken myToken;
+
+    public Event getEvent() throws DataAccessException {
+        Event ret;
+        Database db = new Database();
+        Connection conn = db.openConnection();
+        EventDAO eDao = new EventDAO(conn);
+        ret = eDao.find(eventID);
+        db.closeConnection(true);
+        return ret;
+    }
+
     private String eventID = "";
-
-    public AuthToken getMyToken() {
-        return myToken;
-    }
-
-    public void setMyToken(AuthToken myToken) {
-        this.myToken = myToken;
-    }
 
     public String getEventID() {
         return eventID;

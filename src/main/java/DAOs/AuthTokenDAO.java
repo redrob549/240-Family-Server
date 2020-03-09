@@ -1,6 +1,6 @@
 package DAOs;
 
-import models.AuthToken;
+import FMSmodels.AuthToken;
 
 import java.sql.*;
 
@@ -32,7 +32,7 @@ public class AuthTokenDAO {
     public AuthToken find(String authTokenID) throws DataAccessException {
         AuthToken authToken;
         ResultSet rs = null;
-        String sql = "SELECT * FROM AuthToken WHERE PersonID = ?;";
+        String sql = "SELECT * FROM AuthToken WHERE TokenID = ?;";
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, authTokenID);
             rs = stmt.executeQuery();

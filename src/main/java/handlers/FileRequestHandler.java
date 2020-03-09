@@ -8,7 +8,7 @@ import java.io.*;
 import java.net.HttpURLConnection;
 import java.nio.file.Files;
 
-public class FileRequestHandler implements HttpHandler {
+public class FileRequestHandler extends Handler {
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
@@ -21,10 +21,12 @@ public class FileRequestHandler implements HttpHandler {
                 String filePath = "web" + urlPath;
                 File webPage = new File(filePath);
                 if (webPage.exists()) {
+                    System.out.println("serving homepage");
                     exchange.sendResponseHeaders(HttpURLConnection.HTTP_OK, 0);
                     OutputStream respBody = exchange.getResponseBody();
                     Files.copy(webPage.toPath(), respBody);
                     exchange.getResponseBody().close();
+                    System.out.println("homepage served");
                 }
                 else {
                     exchange.sendResponseHeaders(HttpURLConnection.HTTP_NOT_FOUND, 0);
@@ -34,6 +36,7 @@ public class FileRequestHandler implements HttpHandler {
                     exchange.getResponseBody().close();
                 }
             }
+
         } catch (Exception e) {
             e.printStackTrace();
         }

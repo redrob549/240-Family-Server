@@ -1,190 +1,70 @@
-[Sat Feb 15 13:11:19 MST 2020] - INFO passoff.ServerTest: 	Setting up Persistence Test...
-[Sat Feb 15 13:11:19 MST 2020] - INFO client.Proxy: 	Clear called
-[Sat Feb 15 13:11:19 MST 2020] - INFO client.Client: 	Post without Request Body called
-[Sat Feb 15 13:11:19 MST 2020] - INFO client.Client: 	Attempting to open connection to server
-[Sat Feb 15 13:11:19 MST 2020] - INFO client.Client: 	Connection opened to server
-[Sat Feb 15 13:11:19 MST 2020] - INFO client.Client: 	Setting request method to POST
-[Sat Feb 15 13:11:19 MST 2020] - INFO client.Client: 	Request method set to POST
-[Sat Feb 15 13:11:19 MST 2020] - INFO client.Client: 	Setting Do Output to true
-[Sat Feb 15 13:11:19 MST 2020] - INFO client.Client: 	Do Output set to true
-[Sat Feb 15 13:11:19 MST 2020] - INFO client.Client: 	Connecting to server
-[Sat Feb 15 13:11:22 MST 2020] - INFO passoff.ServerTest: 	Setting up File Handler Default Test...
-[Sat Feb 15 13:11:22 MST 2020] - INFO client.Proxy: 	Clear called
-[Sat Feb 15 13:11:22 MST 2020] - INFO client.Client: 	Post without Request Body called
-[Sat Feb 15 13:11:22 MST 2020] - INFO client.Client: 	Attempting to open connection to server
-[Sat Feb 15 13:11:22 MST 2020] - INFO client.Client: 	Connection opened to server
-[Sat Feb 15 13:11:22 MST 2020] - INFO client.Client: 	Setting request method to POST
-[Sat Feb 15 13:11:22 MST 2020] - INFO client.Client: 	Request method set to POST
-[Sat Feb 15 13:11:22 MST 2020] - INFO client.Client: 	Setting Do Output to true
-[Sat Feb 15 13:11:22 MST 2020] - INFO client.Client: 	Do Output set to true
-[Sat Feb 15 13:11:22 MST 2020] - INFO client.Client: 	Connecting to server
-[Sat Feb 15 13:11:24 MST 2020] - INFO passoff.ServerTest: 	Setting up Realistic Fill Death Test...
-[Sat Feb 15 13:11:24 MST 2020] - INFO client.Proxy: 	Clear called
-[Sat Feb 15 13:11:24 MST 2020] - INFO client.Client: 	Post without Request Body called
-[Sat Feb 15 13:11:24 MST 2020] - INFO client.Client: 	Attempting to open connection to server
-[Sat Feb 15 13:11:24 MST 2020] - INFO client.Client: 	Connection opened to server
-[Sat Feb 15 13:11:24 MST 2020] - INFO client.Client: 	Setting request method to POST
-[Sat Feb 15 13:11:24 MST 2020] - INFO client.Client: 	Request method set to POST
-[Sat Feb 15 13:11:24 MST 2020] - INFO client.Client: 	Setting Do Output to true
-[Sat Feb 15 13:11:24 MST 2020] - INFO client.Client: 	Do Output set to true
-[Sat Feb 15 13:11:24 MST 2020] - INFO client.Client: 	Connecting to server
-[Sat Feb 15 13:11:26 MST 2020] - INFO passoff.ServerTest: 	Setting up Login Invalid User Test...
-[Sat Feb 15 13:11:26 MST 2020] - INFO client.Proxy: 	Clear called
-[Sat Feb 15 13:11:26 MST 2020] - INFO client.Client: 	Post without Request Body called
-[Sat Feb 15 13:11:26 MST 2020] - INFO client.Client: 	Attempting to open connection to server
-[Sat Feb 15 13:11:26 MST 2020] - INFO client.Client: 	Connection opened to server
-[Sat Feb 15 13:11:26 MST 2020] - INFO client.Client: 	Setting request method to POST
-[Sat Feb 15 13:11:26 MST 2020] - INFO client.Client: 	Request method set to POST
-[Sat Feb 15 13:11:26 MST 2020] - INFO client.Client: 	Setting Do Output to true
-[Sat Feb 15 13:11:26 MST 2020] - INFO client.Client: 	Do Output set to true
-[Sat Feb 15 13:11:26 MST 2020] - INFO client.Client: 	Connecting to server
-[Sat Feb 15 13:11:28 MST 2020] - INFO passoff.ServerTest: 	Setting up Load Valid Info Test...
-[Sat Feb 15 13:11:28 MST 2020] - INFO client.Proxy: 	Clear called
-[Sat Feb 15 13:11:28 MST 2020] - INFO client.Client: 	Post without Request Body called
-[Sat Feb 15 13:11:28 MST 2020] - INFO client.Client: 	Attempting to open connection to server
-[Sat Feb 15 13:11:28 MST 2020] - INFO client.Client: 	Connection opened to server
-[Sat Feb 15 13:11:28 MST 2020] - INFO client.Client: 	Setting request method to POST
-[Sat Feb 15 13:11:28 MST 2020] - INFO client.Client: 	Request method set to POST
-[Sat Feb 15 13:11:28 MST 2020] - INFO client.Client: 	Setting Do Output to true
-[Sat Feb 15 13:11:28 MST 2020] - INFO client.Client: 	Do Output set to true
-[Sat Feb 15 13:11:28 MST 2020] - INFO client.Client: 	Connecting to server
-[Sat Feb 15 13:11:30 MST 2020] - INFO passoff.ServerTest: 	Setting up Valid Fill Relationships Test...
-[Sat Feb 15 13:11:30 MST 2020] - INFO client.Proxy: 	Clear called
-[Sat Feb 15 13:11:30 MST 2020] - INFO client.Client: 	Post without Request Body called
-[Sat Feb 15 13:11:30 MST 2020] - INFO client.Client: 	Attempting to open connection to server
-[Sat Feb 15 13:11:30 MST 2020] - INFO client.Client: 	Connection opened to server
-[Sat Feb 15 13:11:30 MST 2020] - INFO client.Client: 	Setting request method to POST
-[Sat Feb 15 13:11:30 MST 2020] - INFO client.Client: 	Request method set to POST
-[Sat Feb 15 13:11:30 MST 2020] - INFO client.Client: 	Setting Do Output to true
-[Sat Feb 15 13:11:30 MST 2020] - INFO client.Client: 	Do Output set to true
-[Sat Feb 15 13:11:30 MST 2020] - INFO client.Client: 	Connecting to server
-[Sat Feb 15 13:11:32 MST 2020] - INFO passoff.ServerTest: 	Setting up Events Bad Auth Token Test...
-[Sat Feb 15 13:11:32 MST 2020] - INFO client.Proxy: 	Clear called
-[Sat Feb 15 13:11:32 MST 2020] - INFO client.Client: 	Post without Request Body called
-[Sat Feb 15 13:11:32 MST 2020] - INFO client.Client: 	Attempting to open connection to server
-[Sat Feb 15 13:11:32 MST 2020] - INFO client.Client: 	Connection opened to server
-[Sat Feb 15 13:11:32 MST 2020] - INFO client.Client: 	Setting request method to POST
-[Sat Feb 15 13:11:32 MST 2020] - INFO client.Client: 	Request method set to POST
-[Sat Feb 15 13:11:32 MST 2020] - INFO client.Client: 	Setting Do Output to true
-[Sat Feb 15 13:11:32 MST 2020] - INFO client.Client: 	Do Output set to true
-[Sat Feb 15 13:11:32 MST 2020] - INFO client.Client: 	Connecting to server
-[Sat Feb 15 13:11:34 MST 2020] - INFO passoff.ServerTest: 	Setting up Clear Test...
-[Sat Feb 15 13:11:34 MST 2020] - INFO client.Proxy: 	Clear called
-[Sat Feb 15 13:11:34 MST 2020] - INFO client.Client: 	Post without Request Body called
-[Sat Feb 15 13:11:34 MST 2020] - INFO client.Client: 	Attempting to open connection to server
-[Sat Feb 15 13:11:34 MST 2020] - INFO client.Client: 	Connection opened to server
-[Sat Feb 15 13:11:34 MST 2020] - INFO client.Client: 	Setting request method to POST
-[Sat Feb 15 13:11:34 MST 2020] - INFO client.Client: 	Request method set to POST
-[Sat Feb 15 13:11:34 MST 2020] - INFO client.Client: 	Setting Do Output to true
-[Sat Feb 15 13:11:34 MST 2020] - INFO client.Client: 	Do Output set to true
-[Sat Feb 15 13:11:34 MST 2020] - INFO client.Client: 	Connecting to server
-[Sat Feb 15 13:11:36 MST 2020] - INFO passoff.ServerTest: 	Setting up Event Bad Auth Token Test...
-[Sat Feb 15 13:11:36 MST 2020] - INFO client.Proxy: 	Clear called
-[Sat Feb 15 13:11:36 MST 2020] - INFO client.Client: 	Post without Request Body called
-[Sat Feb 15 13:11:36 MST 2020] - INFO client.Client: 	Attempting to open connection to server
-[Sat Feb 15 13:11:36 MST 2020] - INFO client.Client: 	Connection opened to server
-[Sat Feb 15 13:11:36 MST 2020] - INFO client.Client: 	Setting request method to POST
-[Sat Feb 15 13:11:36 MST 2020] - INFO client.Client: 	Request method set to POST
-[Sat Feb 15 13:11:36 MST 2020] - INFO client.Client: 	Setting Do Output to true
-[Sat Feb 15 13:11:36 MST 2020] - INFO client.Client: 	Do Output set to true
-[Sat Feb 15 13:11:36 MST 2020] - INFO client.Client: 	Connecting to server
-[Sat Feb 15 13:11:38 MST 2020] - INFO passoff.ServerTest: 	Setting up Realistic Fill Marriage Test...
-[Sat Feb 15 13:11:38 MST 2020] - INFO client.Proxy: 	Clear called
-[Sat Feb 15 13:11:38 MST 2020] - INFO client.Client: 	Post without Request Body called
-[Sat Feb 15 13:11:38 MST 2020] - INFO client.Client: 	Attempting to open connection to server
-[Sat Feb 15 13:11:38 MST 2020] - INFO client.Client: 	Connection opened to server
-[Sat Feb 15 13:11:38 MST 2020] - INFO client.Client: 	Setting request method to POST
-[Sat Feb 15 13:11:38 MST 2020] - INFO client.Client: 	Request method set to POST
-[Sat Feb 15 13:11:38 MST 2020] - INFO client.Client: 	Setting Do Output to true
-[Sat Feb 15 13:11:38 MST 2020] - INFO client.Client: 	Do Output set to true
-[Sat Feb 15 13:11:38 MST 2020] - INFO client.Client: 	Connecting to server
-[Sat Feb 15 13:11:40 MST 2020] - INFO passoff.ServerTest: 	Setting up Person Wrong User Test...
-[Sat Feb 15 13:11:40 MST 2020] - INFO client.Proxy: 	Clear called
-[Sat Feb 15 13:11:40 MST 2020] - INFO client.Client: 	Post without Request Body called
-[Sat Feb 15 13:11:40 MST 2020] - INFO client.Client: 	Attempting to open connection to server
-[Sat Feb 15 13:11:40 MST 2020] - INFO client.Client: 	Connection opened to server
-[Sat Feb 15 13:11:40 MST 2020] - INFO client.Client: 	Setting request method to POST
-[Sat Feb 15 13:11:40 MST 2020] - INFO client.Client: 	Request method set to POST
-[Sat Feb 15 13:11:40 MST 2020] - INFO client.Client: 	Setting Do Output to true
-[Sat Feb 15 13:11:40 MST 2020] - INFO client.Client: 	Do Output set to true
-[Sat Feb 15 13:11:40 MST 2020] - INFO client.Client: 	Connecting to server
-[Sat Feb 15 13:11:42 MST 2020] - INFO passoff.ServerTest: 	Setting up Person Bad Auth Token Test...
-[Sat Feb 15 13:11:42 MST 2020] - INFO client.Proxy: 	Clear called
-[Sat Feb 15 13:11:42 MST 2020] - INFO client.Client: 	Post without Request Body called
-[Sat Feb 15 13:11:42 MST 2020] - INFO client.Client: 	Attempting to open connection to server
-[Sat Feb 15 13:11:42 MST 2020] - INFO client.Client: 	Connection opened to server
-[Sat Feb 15 13:11:42 MST 2020] - INFO client.Client: 	Setting request method to POST
-[Sat Feb 15 13:11:42 MST 2020] - INFO client.Client: 	Request method set to POST
-[Sat Feb 15 13:11:42 MST 2020] - INFO client.Client: 	Setting Do Output to true
-[Sat Feb 15 13:11:42 MST 2020] - INFO client.Client: 	Do Output set to true
-[Sat Feb 15 13:11:42 MST 2020] - INFO client.Client: 	Connecting to server
-[Sat Feb 15 13:11:44 MST 2020] - INFO passoff.ServerTest: 	Setting up Event Valid Test...
-[Sat Feb 15 13:11:44 MST 2020] - INFO client.Proxy: 	Clear called
-[Sat Feb 15 13:11:44 MST 2020] - INFO client.Client: 	Post without Request Body called
-[Sat Feb 15 13:11:44 MST 2020] - INFO client.Client: 	Attempting to open connection to server
-[Sat Feb 15 13:11:44 MST 2020] - INFO client.Client: 	Connection opened to server
-[Sat Feb 15 13:11:44 MST 2020] - INFO client.Client: 	Setting request method to POST
-[Sat Feb 15 13:11:44 MST 2020] - INFO client.Client: 	Request method set to POST
-[Sat Feb 15 13:11:44 MST 2020] - INFO client.Client: 	Setting Do Output to true
-[Sat Feb 15 13:11:44 MST 2020] - INFO client.Client: 	Do Output set to true
-[Sat Feb 15 13:11:44 MST 2020] - INFO client.Client: 	Connecting to server
-[Sat Feb 15 13:11:46 MST 2020] - INFO passoff.ServerTest: 	Setting up Fill 2 Valid Test...
-[Sat Feb 15 13:11:46 MST 2020] - INFO client.Proxy: 	Clear called
-[Sat Feb 15 13:11:46 MST 2020] - INFO client.Client: 	Post without Request Body called
-[Sat Feb 15 13:11:46 MST 2020] - INFO client.Client: 	Attempting to open connection to server
-[Sat Feb 15 13:11:46 MST 2020] - INFO client.Client: 	Connection opened to server
-[Sat Feb 15 13:11:46 MST 2020] - INFO client.Client: 	Setting request method to POST
-[Sat Feb 15 13:11:46 MST 2020] - INFO client.Client: 	Request method set to POST
-[Sat Feb 15 13:11:46 MST 2020] - INFO client.Client: 	Setting Do Output to true
-[Sat Feb 15 13:11:46 MST 2020] - INFO client.Client: 	Do Output set to true
-[Sat Feb 15 13:11:46 MST 2020] - INFO client.Client: 	Connecting to server
-[Sat Feb 15 13:11:48 MST 2020] - INFO passoff.ServerTest: 	Setting up Fill 4 Valid Test...
-[Sat Feb 15 13:11:48 MST 2020] - INFO client.Proxy: 	Clear called
-[Sat Feb 15 13:11:48 MST 2020] - INFO client.Client: 	Post without Request Body called
-[Sat Feb 15 13:11:48 MST 2020] - INFO client.Client: 	Attempting to open connection to server
-[Sat Feb 15 13:11:48 MST 2020] - INFO client.Client: 	Connection opened to server
-[Sat Feb 15 13:11:48 MST 2020] - INFO client.Client: 	Setting request method to POST
-[Sat Feb 15 13:11:48 MST 2020] - INFO client.Client: 	Request method set to POST
-[Sat Feb 15 13:11:48 MST 2020] - INFO client.Client: 	Setting Do Output to true
-[Sat Feb 15 13:11:48 MST 2020] - INFO client.Client: 	Do Output set to true
-[Sat Feb 15 13:11:48 MST 2020] - INFO client.Client: 	Connecting to server
-[Sat Feb 15 13:11:50 MST 2020] - INFO passoff.ServerTest: 	Setting up Fill 5 Valid Test...
-[Sat Feb 15 13:11:50 MST 2020] - INFO client.Proxy: 	Clear called
-[Sat Feb 15 13:11:50 MST 2020] - INFO client.Client: 	Post without Request Body called
-[Sat Feb 15 13:11:50 MST 2020] - INFO client.Client: 	Attempting to open connection to server
-[Sat Feb 15 13:11:50 MST 2020] - INFO client.Client: 	Connection opened to server
-[Sat Feb 15 13:11:50 MST 2020] - INFO client.Client: 	Setting request method to POST
-[Sat Feb 15 13:11:50 MST 2020] - INFO client.Client: 	Request method set to POST
-[Sat Feb 15 13:11:50 MST 2020] - INFO client.Client: 	Setting Do Output to true
-[Sat Feb 15 13:11:50 MST 2020] - INFO client.Client: 	Do Output set to true
-[Sat Feb 15 13:11:50 MST 2020] - INFO client.Client: 	Connecting to server
-[Sat Feb 15 13:11:52 MST 2020] - INFO passoff.ServerTest: 	Setting up Persons Valid Test...
-[Sat Feb 15 13:11:52 MST 2020] - INFO client.Proxy: 	Clear called
-[Sat Feb 15 13:11:52 MST 2020] - INFO client.Client: 	Post without Request Body called
-[Sat Feb 15 13:11:52 MST 2020] - INFO client.Client: 	Attempting to open connection to server
-[Sat Feb 15 13:11:52 MST 2020] - INFO client.Client: 	Connection opened to server
-[Sat Feb 15 13:11:52 MST 2020] - INFO client.Client: 	Setting request method to POST
-[Sat Feb 15 13:11:52 MST 2020] - INFO client.Client: 	Request method set to POST
-[Sat Feb 15 13:11:52 MST 2020] - INFO client.Client: 	Setting Do Output to true
-[Sat Feb 15 13:11:52 MST 2020] - INFO client.Client: 	Do Output set to true
-[Sat Feb 15 13:11:52 MST 2020] - INFO client.Client: 	Connecting to server
-[Sat Feb 15 13:11:54 MST 2020] - INFO passoff.ServerTest: 	Setting up Load Valid Test...
-[Sat Feb 15 13:11:54 MST 2020] - INFO client.Proxy: 	Clear called
-[Sat Feb 15 13:11:54 MST 2020] - INFO client.Client: 	Post without Request Body called
-[Sat Feb 15 13:11:54 MST 2020] - INFO client.Client: 	Attempting to open connection to server
-[Sat Feb 15 13:11:54 MST 2020] - INFO client.Client: 	Connection opened to server
-[Sat Feb 15 13:11:54 MST 2020] - INFO client.Client: 	Setting request method to POST
-[Sat Feb 15 13:11:54 MST 2020] - INFO client.Client: 	Request method set to POST
-[Sat Feb 15 13:11:54 MST 2020] - INFO client.Client: 	Setting Do Output to true
-[Sat Feb 15 13:11:54 MST 2020] - INFO client.Client: 	Do Output set to true
-[Sat Feb 15 13:11:54 MST 2020] - INFO client.Client: 	Connecting to server
-[Sat Feb 15 13:11:56 MST 2020] - INFO passoff.ServerTest: 	Setting up Re-Register User Test...
-[Sat Feb 15 13:11:56 MST 2020] - INFO client.Proxy: 	Clear called
-[Sat Feb 15 13:11:56 MST 2020] - INFO client.Client: 	Post without Request Body called
-[Sat Feb 15 13:11:56 MST 2020] - INFO client.Client: 	Attempting to open connection to server
-[Sat Feb 15 13:11:56 MST 2020] - INFO client.Client: 	Connection opened to server
-[Sat Feb 15 13:11:56 MST 2020] - INFO client.Client: 	Setting request method to POST
-[Sat Feb 15 13:11:56 MST 2020] - INFO client.Client: 	Request method set to POST
-[Sat Feb 15 13:11:56 MST 2020] - INFO client.Client: 	Setting Do Output to true
-[Sat Feb 15 13:11:56 MST 2020] - INFO client.Client: 	Do Output set to true
-[Sat Feb 15 13:11:56 MST 2020] - INFO client.Client: 	Connecting to server
+[Sun Mar 08 20:44:47 MDT 2020] - INFO passoff.ServerTest: 	Setting up Event Valid Test...
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Proxy: 	Clear called
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Post without Request Body called
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Attempting to open connection to server
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Connection opened to server
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Setting request method to POST
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Request method set to POST
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Setting Do Output to true
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Do Output set to true
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Connecting to server
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Connected to server
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Getting response code from server
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Response code 200 returned
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Getting input stream from server
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Reading input stream into a string
+[Sun Mar 08 20:44:47 MDT 2020] - INFO passoff.ServerTest: 	Running Event Valid Test...
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Proxy: 	Load called
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Post with Request Body called
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Attempting to open connection to server
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Connection opened to server
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Setting request method to POST
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Request method set to POST
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Setting Do Output to true
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Do Output set to true
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Connecting to server
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Connected to server
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Opening output stream to server
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Writing request to server output stream
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Request written to server output stream
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Closing output stream to server
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Output stream to server closed
+[Sun Mar 08 20:44:47 MDT 2020] - INFO client.Client: 	Getting response code from server
+[Sun Mar 08 20:44:48 MDT 2020] - INFO client.Client: 	Response code 200 returned
+[Sun Mar 08 20:44:48 MDT 2020] - INFO client.Client: 	Getting input stream from server
+[Sun Mar 08 20:44:48 MDT 2020] - INFO client.Client: 	Reading input stream into a string
+[Sun Mar 08 20:44:48 MDT 2020] - INFO client.Proxy: 	Login called
+[Sun Mar 08 20:44:48 MDT 2020] - INFO client.Client: 	Post with Request Body called
+[Sun Mar 08 20:44:48 MDT 2020] - INFO client.Client: 	Attempting to open connection to server
+[Sun Mar 08 20:44:48 MDT 2020] - INFO client.Client: 	Connection opened to server
+[Sun Mar 08 20:44:48 MDT 2020] - INFO client.Client: 	Setting request method to POST
+[Sun Mar 08 20:44:48 MDT 2020] - INFO client.Client: 	Request method set to POST
+[Sun Mar 08 20:44:48 MDT 2020] - INFO client.Client: 	Setting Do Output to true
+[Sun Mar 08 20:44:48 MDT 2020] - INFO client.Client: 	Do Output set to true
+[Sun Mar 08 20:44:48 MDT 2020] - INFO client.Client: 	Connecting to server
+[Sun Mar 08 20:44:48 MDT 2020] - INFO client.Client: 	Connected to server
+[Sun Mar 08 20:44:48 MDT 2020] - INFO client.Client: 	Opening output stream to server
+[Sun Mar 08 20:44:48 MDT 2020] - INFO client.Client: 	Writing request to server output stream
+[Sun Mar 08 20:44:48 MDT 2020] - INFO client.Client: 	Request written to server output stream
+[Sun Mar 08 20:44:48 MDT 2020] - INFO client.Client: 	Closing output stream to server
+[Sun Mar 08 20:44:48 MDT 2020] - INFO client.Client: 	Output stream to server closed
+[Sun Mar 08 20:44:48 MDT 2020] - INFO client.Client: 	Getting response code from server
+[Sun Mar 08 20:44:48 MDT 2020] - INFO client.Client: 	Response code 200 returned
+[Sun Mar 08 20:44:48 MDT 2020] - INFO client.Client: 	Getting input stream from server
+[Sun Mar 08 20:44:48 MDT 2020] - INFO client.Client: 	Reading input stream into a string
+[Sun Mar 08 20:46:48 MDT 2020] - INFO client.Proxy: 	Event called
+[Sun Mar 08 20:46:48 MDT 2020] - INFO client.Client: 	Get with Auth Token called
+[Sun Mar 08 20:46:48 MDT 2020] - INFO client.Client: 	Attempting to open connection to server
+[Sun Mar 08 20:46:48 MDT 2020] - INFO client.Client: 	Connection opened to server
+[Sun Mar 08 20:46:48 MDT 2020] - INFO client.Client: 	Setting request method to GET
+[Sun Mar 08 20:46:48 MDT 2020] - INFO client.Client: 	Request method set to GET
+[Sun Mar 08 20:46:48 MDT 2020] - INFO client.Client: 	Setting Do Output to false
+[Sun Mar 08 20:46:48 MDT 2020] - INFO client.Client: 	Do Output set to false
+[Sun Mar 08 20:46:48 MDT 2020] - INFO client.Client: 	Adding Auth token 532e9e29-90c4-47d4-ba7f-e96823334ff5
+[Sun Mar 08 20:46:48 MDT 2020] - INFO client.Client: 	Auth token set to 532e9e29-90c4-47d4-ba7f-e96823334ff5
+[Sun Mar 08 20:46:48 MDT 2020] - INFO client.Client: 	Connecting to server
+[Sun Mar 08 20:46:48 MDT 2020] - INFO client.Client: 	Connected to server
+[Sun Mar 08 20:46:48 MDT 2020] - INFO client.Client: 	Getting response code from server
+[Sun Mar 08 20:46:48 MDT 2020] - INFO client.Client: 	Response code 200 returned
+[Sun Mar 08 20:46:48 MDT 2020] - INFO client.Client: 	Getting input stream from server
+[Sun Mar 08 20:46:48 MDT 2020] - INFO client.Client: 	Reading input stream into a string

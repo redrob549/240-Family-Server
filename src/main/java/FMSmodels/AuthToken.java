@@ -1,4 +1,4 @@
-package models;
+package FMSmodels;
 
 public class AuthToken {
     private String tokenID;

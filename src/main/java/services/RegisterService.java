@@ -1,6 +1,11 @@
 package services;
 
-import models.User;
+import DAOs.DataAccessException;
+import DAOs.Database;
+import DAOs.UserDAO;
+import FMSmodels.User;
+
+import java.sql.Connection;
 
 public class RegisterService {
     public RegisterService() {
@@ -13,15 +18,34 @@ public class RegisterService {
      * performs the registration functions when making a new user.
      * @return true if user is successfully registered.
      */
-    public boolean Register () {
-        return false;
+    public boolean Register () throws DataAccessException {
+        try {
+            CreateAccount();
+
+            return true;
+        } catch (DataAccessException e) {
+            throw e;
+        } catch (Exception f) {
+            return false;
+        }
     }
 
     /**
      * adds the new user data to the database.
      */
-    private void CreateAccount() {
+    private void CreateAccount() throws DataAccessException {
+        Database db = new Database();
+        try {
 
+            Connection conn = db.openConnection();
+            UserDAO uDao = new UserDAO(conn);
+            uDao.insert(myUser);
+            db.closeConnection(true);
+        }
+        catch (DataAccessException e){
+            db.closeConnection(false);
+            throw e;
+        }
     }
 
     /**

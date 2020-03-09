@@ -2,9 +2,8 @@ package dao;
 
 import DAOs.DataAccessException;
 import DAOs.Database;
-import DAOs.EventDAO;
 import DAOs.PersonDAO;
-import models.Person;
+import FMSmodels.Person;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

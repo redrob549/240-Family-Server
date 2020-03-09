@@ -1,9 +1,12 @@
-package models;
+package FMSmodels;
+
+import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
 
 public class Person {
     private String personID;
+    @SerializedName("associatedUsername")
     private String associatedUser;
     private String firstName;
     private String lastName;

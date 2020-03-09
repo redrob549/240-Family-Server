@@ -1,7 +1,7 @@
 package dao;
 
 import DAOs.*;
-import models.User;
+import FMSmodels.User;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

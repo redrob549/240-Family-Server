@@ -1,8 +1,8 @@
 package services;
 
-import models.Event;
-import models.Person;
-import models.User;
+import FMSmodels.Event;
+import FMSmodels.Person;
+import FMSmodels.User;
 
 public class LoadService {
     public LoadService() {

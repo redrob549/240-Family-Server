@@ -1,6 +1,6 @@
 package DAOs;
 
-import models.User;
+import FMSmodels.User;
 
 import java.sql.*;
 
@@ -52,6 +52,41 @@ public class UserDAO {
         String sql = "SELECT * FROM User WHERE PersonID = ?;";
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, userID);
+            rs = stmt.executeQuery();
+            if (rs.next()) {
+                user = new User(rs.getString("userName"), rs.getString("password"),
+                        rs.getString("email"), rs.getString("firstName"), rs.getString("lastName"),
+                        rs.getString("gender"), rs.getString("personID"));
+                return user;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new DataAccessException("Error encountered while finding user");
+        } finally {
+            if(rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        }
+        return null;
+    }
+
+    /**
+     * finds a User from the database with a matching username.
+     * @param username a string ID of the user object to find
+     * @return a user object with matching username.
+     * @throws DataAccessException thrown when unable to find, or not in the database.
+     */
+    public User findUser(String username) throws DataAccessException {
+        User user;
+        ResultSet rs = null;
+        String sql = "SELECT * FROM User WHERE UserName = ?;";
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, username);
             rs = stmt.executeQuery();
             if (rs.next()) {
                 user = new User(rs.getString("userName"), rs.getString("password"),

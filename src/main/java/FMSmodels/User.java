@@ -1,4 +1,4 @@
-package models;
+package FMSmodels;
 
 public class User {
     public User(String userName, String password, String email, String firstName,
